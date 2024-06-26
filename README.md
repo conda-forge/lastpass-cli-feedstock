@@ -174,4 +174,5 @@ Feedstock Maintainers
 =====================
 
 * [@asford](https://github.com/asford/)
+* [@tdsmith](https://github.com/tdsmith/)
 
