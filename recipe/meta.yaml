@@ -22,13 +22,13 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - asciidoc  # [not win]
-    - libxml2~=2.11.5   # [not win]
+    - libxml2 ~=2.11.5   # [not win]
     - cmake
     - make
     - pkg-config
   host:
     - libcurl
-    - libxml2~=2.11
+    - libxml2 ~=2.11.5
     - openssl
 
 test:
