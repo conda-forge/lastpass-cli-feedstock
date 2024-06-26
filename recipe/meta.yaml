@@ -10,7 +10,8 @@ source:
   sha256: 542dc3d7ff175866c0eddfcc6f2dffdb54acf6854dd1fadaf4d509dcde2d4bf3
 
 build:
-  number: 1
+  number: 2
+  string: libxml211
   script: "make && make install"
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
@@ -21,13 +22,13 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - asciidoc  # [not win]
-    - libxml2   # [not win]
+    - libxml2~=2.11.5   # [not win]
     - cmake
     - make
     - pkg-config
   host:
     - libcurl
-    - libxml2
+    - libxml2~=2.11
     - openssl
 
 test:
