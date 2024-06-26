@@ -30,6 +30,8 @@ requirements:
     - libcurl
     - libxml2 ~=2.11.5
     - openssl
+  run:
+    - libxml2 ~=2.11
 
 test:
   commands:
