@@ -8,12 +8,9 @@ package:
 source:
   url: https://github.com/lastpass/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 542dc3d7ff175866c0eddfcc6f2dffdb54acf6854dd1fadaf4d509dcde2d4bf3
-  patches:
-    # Need patch from https://github.com/lastpass/lastpass-cli/issues/532
-    - 532-fix-common.patch
 
 build:
-  number: 0
+  number: 1
   script: "make && make install"
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
@@ -50,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - asford
+    - tdsmith
