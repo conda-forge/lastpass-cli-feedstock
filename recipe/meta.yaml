@@ -11,7 +11,6 @@ source:
 
 build:
   number: 2
-  string: libxml211
   script: "make && make install"
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
@@ -22,16 +21,14 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - asciidoc  # [not win]
-    - libxml2 ~=2.11.5   # [not win]
+    - libxml2   # [not win]
     - cmake
     - make
     - pkg-config
   host:
     - libcurl
-    - libxml2 ~=2.11.5
+    - libxml2
     - openssl
-  run:
-    - libxml2 ~=2.11
 
 test:
   commands:
