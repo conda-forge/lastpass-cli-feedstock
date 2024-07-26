@@ -21,7 +21,7 @@ cxx_compiler_version:
 libcurl:
 - '8'
 libxml2:
-- '2.11'
+- 2.11.5
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
