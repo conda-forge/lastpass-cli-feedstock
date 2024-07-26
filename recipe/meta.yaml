@@ -10,7 +10,7 @@ source:
   sha256: 542dc3d7ff175866c0eddfcc6f2dffdb54acf6854dd1fadaf4d509dcde2d4bf3
 
 build:
-  number: 1
+  number: 2
   script: "make && make install"
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
