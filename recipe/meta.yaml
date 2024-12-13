@@ -1,5 +1,5 @@
 {% set name = "lastpass-cli" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lastpass/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9d52616fc1065eb7122cd9b43a31c4155eed22c3ef9d2806dbb3cb49e9d38859
+  sha256: 5e4ff5c9fef8aa924547c565c44e5b4aa31e63d642873847b8e40ce34558a5e1
 
 build:
   number: 0
