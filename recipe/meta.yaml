@@ -10,7 +10,7 @@ source:
   sha256: 5e4ff5c9fef8aa924547c565c44e5b4aa31e63d642873847b8e40ce34558a5e1
 
 build:
-  number: 0
+  number: 1
   script: "make && make install"
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
@@ -18,7 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - asciidoc  # [not win]
     - libxml2   # [not win]
@@ -47,4 +47,5 @@ about:
 extra:
   recipe-maintainers:
     - asford
+    - danielnachun
     - tdsmith
