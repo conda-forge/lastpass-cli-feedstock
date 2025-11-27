@@ -13,7 +13,7 @@ source:
 
 build:
   # Skip windows build, but upstream supports windows
-  number: 1
+  number: 2
   skip: win
   script: make && make install
 
