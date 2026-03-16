@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: 1.6.1
+
+package:
+  name: lastpass-cli
+  version: ${{ version }}
+
+source:
+  url: https://github.com/lastpass/lastpass-cli/releases/download/v${{ version }}/lastpass-cli-${{ version }}.tar.gz
+  sha256: 5e4ff5c9fef8aa924547c565c44e5b4aa31e63d642873847b8e40ce34558a5e1
+
+build:
+  # Skip windows build, but upstream supports windows
+  number: 2
+  skip: win
+  script: make && make install
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+    - if: not win
+      then:
+        - asciidoc
+        - libxml2
+    - cmake
+    - make
+    - pkg-config
+  host:
+    - libcurl
+    - libxml2
+    - openssl
+
+tests:
+  - script:
+      - lpass -v
+
+about:
+  license: GPL-2.0-or-later
+  license_file:
+    - LICENSE.OpenSSL
+    - COPYING
+  summary: LastPass command line interface tool
+  homepage: https://www.lastpass.com
+  repository: https://github.com/lastpass/lastpass-cli
+  documentation: https://lastpass.github.io/lastpass-cli/lpass.1.html
+
+extra:
+  recipe-maintainers:
+    - asford
+    - danielnachun
+    - tdsmith
