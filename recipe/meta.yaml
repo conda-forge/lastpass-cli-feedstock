@@ -10,7 +10,7 @@ source:
   sha256: 5e4ff5c9fef8aa924547c565c44e5b4aa31e63d642873847b8e40ce34558a5e1
 
 build:
-  number: 2
+  number: 3
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
 
@@ -20,13 +20,13 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - asciidoc  # [not win]
-    - libxml2-devel   # [not win]
+    - {{ xml_target }}   # [not win]
     - cmake
     - make
     - pkg-config
   host:
     - libcurl
-    - libxml2-devel
+    - {{ xml_target }}
     - openssl
 
 test:
