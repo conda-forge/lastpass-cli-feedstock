@@ -1,0 +1,3 @@
+xml_target:
+  - libxml2 2.14.4
+  - libxml2-devel
