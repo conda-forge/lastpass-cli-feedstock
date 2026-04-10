@@ -1,3 +1,7 @@
 xml_target:
   - libxml2 2.14.4
   - libxml2-devel
+c_compiler_version: # [osx]
+  - 18  # [osx]
+cxx_compiler_version: # [osx]
+  - 18  # [osx]
