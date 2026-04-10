@@ -1,3 +1,9 @@
 xml_target:
   - libxml2 2.14.4
   - libxml2-devel
+clang_compiler_version:
+  - 18
+  - 19
+zip_keys:
+  - xml_target
+  - clang_compiler_version
