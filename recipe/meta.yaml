@@ -1,5 +1,5 @@
 {% set name = "lastpass-cli" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/lastpass/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5e4ff5c9fef8aa924547c565c44e5b4aa31e63d642873847b8e40ce34558a5e1
+  sha256: b65b9c951a9a17b87b8ac0500808c716ef8e5fe6e70f1fd44f23b8385aa30984
 
 build:
-  number: 4
+  number: 0
   # Skip windows build, but upstream supports windows
   skip: true  # [win]
 
